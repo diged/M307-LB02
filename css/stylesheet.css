@@ -1,0 +1,151 @@
+/*BODY*/
+body {
+    background: #f8d7da;
+    color: #000000;
+    font-family: montserrat, sans-serif;
+    font-size: 10pt;
+}
+/*DARK MODE*/
+.dark-mode {
+    background-color: #8B5F65;
+    /*color: white;*/
+}
+
+/*NAVIGATION*/
+.navbar {
+    color: #000000;
+}
+
+/*LOGO*/
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+/*BUTTON*/
+.myButton {
+    border-color: hotpink;
+    outline-color: hotpink;
+    color: hotpink;
+    margin-top: 30px;
+}
+
+.myButton:hover {
+    background-color: hotpink;
+    border-color: hotpink;
+}
+
+/*HOME*/
+#home-section{
+    background-image: url(../images/Donut_Trio_4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    min-height: 500px;
+}
+
+#home-section .light-overlay {
+    width: 100%;
+    min-height: 556px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#home-section {
+    align-self: center;
+}
+
+#home-section .home-inner {
+    padding-top: 150px;
+}
+
+#header-text {
+    align-self: center;
+}
+
+h1 {
+    color: #000000;
+}
+
+.einleitung{
+    color: #000000;
+}
+
+#home-text {
+    align-self: center;
+}
+
+/*BILDER ANPASSUNG*/
+.object-fit img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/*CAROUSEL*/
+#carousel {
+    object-fit: cover;
+}
+
+.carousel-item {
+    height: 32rem;
+}
+.carousel-inner {
+    border: 10px;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+/*REVIEWS*/
+#reviews {
+    background-color: pink;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+}
+
+.display-3 {
+    color: #ffffff;
+}
+
+.review-text {
+    align-self: center;
+    text-align: justify;
+}
+
+/*KATALOG*/
+#katalog {
+    background-color: pink;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+}
+
+.display-3 {
+    color: #ffffff;
+}
+
+.polaroid {
+    border: white;
+    background-color: white;
+    margin: 30px;
+}
+.polaroid_bild{
+    /*width: 50%;*/
+    object-fit: cover;
+    height: 300px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*FOOTER*/
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    width: 100%;
+    background-color: #ffffff;
+}
