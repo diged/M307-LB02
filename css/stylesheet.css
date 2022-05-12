@@ -142,6 +142,18 @@ h1 {
     padding-bottom: 20px;
 }
 
+/*KATALOG*/
+#katalog {
+    background-color: pink;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffffff;
+}
+.display-3 {
+    color: #ffffff;
+}
+
 /*FOOTER*/
 footer {
     margin-top: 30px;
