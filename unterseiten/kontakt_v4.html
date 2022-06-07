@@ -33,7 +33,7 @@
         </ul>
     </div>
 </nav>
-<!--REVIEWS HEADER-->
+<!--KONTAKT HEADER-->
 <header id="kontakt">
     <div class="container">
         <div class="row">
@@ -54,38 +54,44 @@
     <p>Vielen Dank, dass Sie unsere Seite nutzen! <br>
         Lassen Sie uns wissen, was Sie davon halten. Füllen Sie dafür einfach das Kontaktformular aus. <br>
         Wir freuen uns auf Ihr Feedback!</p>
-    <form class="row">
+    <form class="row" id="form">
         <div class="col-6">
             <h5>Vorname</h5>
-            <input type="text" class="form-control" id="vorname" minlength="2" maxlength="40" placeholder="Vorname" required>
+            <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+            <small>Error message</small>
         </div>
         <div class="col-6">
             <h5>Nachname</h5>
-            <input type="text" class="form-control" id="nachname" minlength="2" maxlength="40" placeholder="Nachname" required>
+            <input type="text" class="form-control" id="nachname" placeholder="Nachname">
+            <small>Error message</small>
         </div>
         <br>
         <br>
         <div class="col-12">
             <h5>E-Mail</h5>
-            <input type="email" class="form-control" placeholder="E-Mail-Adresse" required>
+            <input type="email" class="form-control" id="email" placeholder="E-Mail-Adresse">
+            <small>Error message</small>
         </div>
         <div class="col-4">
             <h5>Geschlecht</h5>
-            <select name="geschlecht" class="form-select" required>
+            <select name="geschlecht" class="form-select" id="geschlecht">
                 <option value=" " selected>Bitte wählen</option>
                 <option value="val1">Männlich</option>
                 <option value="val2">Weiblich</option>
                 <option value="val3">Divers</option>
                 <option value="val4">Keine Angabe</option>
             </select>
+            <small>Error message</small>
         </div>
         <div class="col-4">
             <h5>Telefonnummer</h5>
-            <input type="tel" class="form-control" name="telefonnummer" placeholder="078 123 456 78 90" required>
+            <input type="tel" class="form-control" id="telefonnummer" name="telefonnummer" placeholder="+41 11 222 33 44">
+            <small>Error message</small>
         </div>
         <div class="col-4">
             <h5>Geburtsdatum</h5>
-            <input type="date" class="form-control" name="geburtsdatum" placeholder="tt.mm.jjjj" required>
+            <input type="date" class="form-control" id="geburtsdatum" name="geburtsdatum" placeholder="tt.mm.jjjj">
+            <small>Error message</small>
         </div>
         <div class="col-4">
             <h5>Wie sind Sie auf unsere Seite gestossen?</h5>
@@ -103,20 +109,20 @@
             <h5>Bitte wählen Sie über welches Thema Sie ein Anliegen haben:</h5>
             <br>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">Produkt</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioProdukt" value="option1">
+                <label class="form-check-label" for="radioProdukt">Produkt</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Katalog</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioKatalog" value="option2">
+                <label class="form-check-label" for="radioKatalog">Katalog</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">Reviews</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioReviews" value="option2">
+                <label class="form-check-label" for="radioReviews">Reviews</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                <label class="form-check-label" for="inlineRadio2">anderes Thema</label>
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioAnderesThema" value="option2">
+                <label class="form-check-label" for="radioAnderesThema">anderes Thema</label>
             </div>
             <br>
             <br>
@@ -126,6 +132,7 @@
             <button type="submit" class="btn btn-outline-primary myButton submit-btn">Submit</button>
         </div>
     </form>
+    <script src="../js/validate-inputs.js"></script>
 </div>
 
 <!--FOOTER-->
