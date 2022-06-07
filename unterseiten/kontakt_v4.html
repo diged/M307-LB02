@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dee2anx.css">
+
+    <title>Kontakt</title>
+</head>
+<body>
+<!--NAVIGATION-->
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <div class="container">
+        <a href="../index.html"><img class="logo" src="../assets/DilasDonuts_Logo.svg" alt="Logo"></a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="../index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="reviews.html" class="nav-link">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a href="katalog.html" class="nav-link">Katalog</a>
+            </li>
+            <li class="nav-item">
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--REVIEWS HEADER-->
+<header id="kontakt">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-3">
+                    <strong>Kontakt</strong>
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+<br>
+<br>
+<!--KONTAKT FORMULAR-->
+<div class="container">
+    <h2><b>Kontaktieren Sie uns</b></h2>
+    <p>Vielen Dank, dass Sie unsere Seite nutzen! <br>
+        Lassen Sie uns wissen, was Sie davon halten. Füllen Sie dafür einfach das Kontaktformular aus. <br>
+        Wir freuen uns auf Ihr Feedback!</p>
+    <form class="row">
+        <div class="col-6">
+            <h5>Vorname</h5>
+            <input type="text" class="form-control" id="vorname" minlength="2" maxlength="40" placeholder="Vorname" required>
+        </div>
+        <div class="col-6">
+            <h5>Nachname</h5>
+            <input type="text" class="form-control" id="nachname" minlength="2" maxlength="40" placeholder="Nachname" required>
+        </div>
+        <br>
+        <br>
+        <div class="col-12">
+            <h5>E-Mail</h5>
+            <input type="email" class="form-control" placeholder="E-Mail-Adresse" required>
+        </div>
+        <div class="col-4">
+            <h5>Geschlecht</h5>
+            <select name="geschlecht" class="form-select" required>
+                <option value=" " selected>Bitte wählen</option>
+                <option value="val1">Männlich</option>
+                <option value="val2">Weiblich</option>
+                <option value="val3">Divers</option>
+                <option value="val4">Keine Angabe</option>
+            </select>
+        </div>
+        <div class="col-4">
+            <h5>Telefonnummer</h5>
+            <input type="tel" class="form-control" name="telefonnummer" placeholder="078 123 456 78 90" required>
+        </div>
+        <div class="col-4">
+            <h5>Geburtsdatum</h5>
+            <input type="date" class="form-control" name="geburtsdatum" placeholder="tt.mm.jjjj" required>
+        </div>
+        <div class="col-4">
+            <h5>Wie sind Sie auf unsere Seite gestossen?</h5>
+            <p>Mehrere Antworten sind möglich.</p>
+            <input type="checkbox" class="form-check-input" name="freunde-familie" id="c1">
+            <label for="c1">Freunde/Familie</label><br>
+            <input type="checkbox" class="form-check-input" name="google" id="c2">
+            <label for="c2">Google</label><br>
+            <input type="checkbox" class="form-check-input" name="social-media" id="c3">
+            <label for="c3">Social Media</label><br>
+            <input type="checkbox" class="form-check-input" name="youtube" id="c4">
+            <label for="c4">YouTube</label>
+        </div>
+        <div class="col-8">
+            <h5>Bitte wählen Sie über welches Thema Sie ein Anliegen haben:</h5>
+            <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Produkt</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Katalog</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Reviews</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">anderes Thema</label>
+            </div>
+            <br>
+            <br>
+            <textarea name="txt" class="form-control" maxlength="2500" placeholder="Geben Sie hier ihre Nachricht ein..."></textarea>
+        </div>
+        <div class="col">
+            <button type="submit" class="btn btn-outline-primary myButton submit-btn">Submit</button>
+        </div>
+    </form>
+</div>
+
+<!--FOOTER-->
+<footer id="main-footer" class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>Dilas Donuts</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--Javascript Katalog-->
+<script src="../js/katalog_elemente2.js"></script>
+<!-- Optional JavaScript -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,40 +1,43 @@
 /*BODY*/
 body {
-    background: #f8d7da;
+    background: #f8dddf;
     color: #000000;
     font-family: montserrat, sans-serif;
-    font-size: 10pt;
+    font-size: 12pt;
 }
-/*DARK MODE*/
-.dark-mode {
-    background-color: #8B5F65;
-    /*color: white;*/
+h5 {
+    padding-top: 20px;
 }
-
+.display-3 {
+    font-weight: bold;
+    color: #ffffff;
+}
+.display-4 {
+    font-weight: bold;
+    color: #000000;
+}
 /*NAVIGATION*/
 .navbar {
     color: #000000;
 }
-
 /*LOGO*/
 .logo {
     height: 100px;
     width: auto;
 }
-
 /*BUTTON*/
 .myButton {
-    border-color: hotpink;
-    outline-color: hotpink;
-    color: hotpink;
-    margin-top: 30px;
-}
-
-.myButton:hover {
     background-color: hotpink;
     border-color: hotpink;
+    color: white;
+    margin-top: 30px;
 }
-
+.myButton:hover {
+    outline-color: hotpink;
+    border-color: hotpink;
+    color: hotpink;
+    background-color: transparent;
+}
 /*HOME*/
 #home-section{
     background-image: url(../images/Donut_Trio_4.jpg);
@@ -43,49 +46,36 @@ body {
     background-attachment: scroll;
     min-height: 500px;
 }
-
 #home-section .light-overlay {
     width: 100%;
     min-height: 556px;
     background-color: rgba(255,255,255,0.5);
 }
-
 #home-section {
     align-self: center;
 }
-
 #home-section .home-inner {
     padding-top: 150px;
 }
-
 #header-text {
     align-self: center;
 }
-
-h1 {
-    color: #000000;
-}
-
 .einleitung{
     color: #000000;
 }
-
 #home-text {
     align-self: center;
 }
-
 /*BILDER ANPASSUNG*/
 .object-fit img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-
 /*CAROUSEL*/
 #carousel {
     object-fit: cover;
 }
-
 .carousel-item {
     height: 32rem;
 }
@@ -95,7 +85,6 @@ h1 {
     border-style: solid;
     border-radius: 8px;
 }
-
 /*REVIEWS*/
 #reviews {
     background-color: pink;
@@ -105,15 +94,10 @@ h1 {
     color: #ffffff;
 }
 
-.display-3 {
-    color: #ffffff;
-}
-
 .review-text {
     align-self: center;
     text-align: justify;
 }
-
 /*KATALOG*/
 #katalog {
     background-color: pink;
@@ -122,11 +106,6 @@ h1 {
     padding-bottom: 50px;
     color: #ffffff;
 }
-
-.display-3 {
-    color: #ffffff;
-}
-
 .polaroid {
     border: white;
     background-color: white;
@@ -141,19 +120,50 @@ h1 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
-/*KATALOG*/
-#katalog {
+/*KONTAKT*/
+#kontakt {
     background-color: pink;
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
     color: #ffffff;
 }
-.display-3 {
-    color: #ffffff;
+/*.kontakt-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+    background-color: white;
+}*/
+.check
+.kontakt-box:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
-
+.left {
+    padding-top: 80px;
+    padding-left: 50px;
+}
+.right {
+    padding: 50px 20px 50px 10px;
+}
+.right-first-row {
+    float: left;
+    padding-right: 20px;
+}
+.right-second-row {
+    float: right;
+}
+.submit-btn {
+    float: right;
+}
 /*FOOTER*/
 footer {
     margin-top: 30px;
