@@ -3,9 +3,9 @@ const form = document.getElementById('form');
 const vorname = document.getElementById('vorname');
 const nachname = document.getElementById('nachname');
 const email = document.getElementById('email');
+const telefonnummer = document.getElementById('telefonnummer')
 const geschlecht = document.getElementById('geschlecht');
-const telefonnummer = document.getElementById('telefonnummer');
-//Wie kontrolliere ich Radio-Buttons und Checkboxen?
+const ausgaben = document.getElementById('anzahl')
 
 // Show input error message
 function showError(input, message) {
@@ -27,29 +27,39 @@ function checkEmail(input) {
     if (re.test(input.value.trim())) {
         showSuccess(input);
     } else {
-        showError(input, 'E-Mail ist nicht gültig.');
+        showError(input, 'Email ist nicht gültig.');
     }
 }
 
-// Check telefonnummer is valid
+//Check tel is valid
 function checkTelefon(input) {
     const reg = /(\b(0041|0)|\B\+41)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/;
-    if (re.test(input.value.trim())) {
+    if (reg.test(input.value.trim())) {
         showSuccess(input);
     } else {
         showError(input, 'Telefonnummer ist nicht gültig.');
     }
 }
 
-//Check drop-down is valid
+//Check drop-down/geschlecht is valid
 function checkGeschlecht() {
-    const geschlecht = document.getElementById("geschlecht");
     if (geschlecht.value === "") {
         alert("Bitte wählen Sie eine Option.");
         return false;
     }
     return true;
 }
+
+// Check Anzahl Ausgaben
+function checkAnzahl(input) {
+    const reg = /(^0?[1-9]$)|(^1[0-2]$)/;
+    if (reg.test(input.value.trim())) {
+        showSuccess(input);
+    } else {
+        showError(input, 'Anzahl muss zwischen 1 und 12 sein.');
+    }
+}
+
 
 //Check required fields
 function checkRequired(inputArr) {
@@ -88,12 +98,13 @@ function getFieldName(input) {
 //Validate form input elements
 function validateForm(){
     //check required inputs
-    if(!checkRequired([vorname, nachname, email, geschlecht, telefonnummer])){
-        checkLength(vorname, 2, 30);
-        checkLength(nachname, 2, 30);
+    if(!checkRequired([vorname, nachname, email, telefonnummer, geschlecht, ausgaben])){
+        checkLength(vorname, 3, 30);
+        checkLength(nachname, 3, 30);
         checkEmail(email);
-        checkTelefon(telefonnummer);
-        checkGeschlecht(geschlecht)
+        checkTelefon(telefonnummer)
+        checkGeschlecht(geschlecht);
+        checkAnzahl(ausgaben)
     }
 }
 

@@ -28,7 +28,7 @@
                 <a href="katalog.html" class="nav-link">Katalog</a>
             </li>
             <li class="nav-item">
-                <a href="kontakt_v4.html" class="nav-link">Kontakt</a>
+                <a href="kontakt_v7.html" class="nav-link">Kontakt</a>
             </li>
         </ul>
     </div>
@@ -49,65 +49,61 @@
 <br>
 <br>
 <!--KONTAKT FORMULAR-->
-<div class="container">
-    <h2><b>Kontaktieren Sie uns</b></h2>
-    <p>Vielen Dank, dass Sie unsere Seite nutzen! <br>
-        Lassen Sie uns wissen, was Sie davon halten. Füllen Sie dafür einfach das Kontaktformular aus. <br>
-        Wir freuen uns auf Ihr Feedback!</p>
-    <form class="row" id="form">
-        <div class="col-6">
-            <h5>Vorname</h5>
-            <input type="text" class="form-control" id="vorname" placeholder="Vorname">
+<div class="container form">
+    <form id="form" class="form">
+        <h2>Kontaktieren Sie uns</h2>
+        <p>Vielen Dank, dass Sie unsere Seite nutzen! <br>
+            Haben Sie ein Problem zu einem unserer Produkte oder Vorschläge, wie wir unsere Seite verbessern können?
+            Füllen Sie dafür einfach das Kontaktformular aus. Wir freuen uns auf Ihr Feedback!</p>
+        <div class="form-control">
+            <label for="vorname">Vorname</label>
+            <input type="text" id="vorname" placeholder="Vornamen eingeben" />
             <small>Error message</small>
         </div>
-        <div class="col-6">
-            <h5>Nachname</h5>
-            <input type="text" class="form-control" id="nachname" placeholder="Nachname">
+        <div class="form-control">
+            <label for="nachname">Nachname</label>
+            <input type="text" id="nachname" placeholder="Nachname eingeben" />
             <small>Error message</small>
         </div>
-        <br>
-        <br>
-        <div class="col-12">
-            <h5>E-Mail</h5>
-            <input type="email" class="form-control" id="email" placeholder="E-Mail-Adresse">
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email eingeben" />
             <small>Error message</small>
         </div>
-        <div class="col-4">
-            <h5>Geschlecht</h5>
-            <select name="geschlecht" class="form-select" id="geschlecht">
+        <div class="form-control">
+            <label for="geschlecht">Geschlecht</label>
+            <select id="geschlecht">
                 <option value=" " selected>Bitte wählen</option>
                 <option value="val1">Männlich</option>
                 <option value="val2">Weiblich</option>
                 <option value="val3">Divers</option>
-                <option value="val4">Keine Angabe</option>
             </select>
             <small>Error message</small>
         </div>
-        <div class="col-4">
-            <h5>Telefonnummer</h5>
-            <input type="tel" class="form-control" id="telefonnummer" name="telefonnummer" placeholder="+41 11 222 33 44">
-            <small>Error message</small>
-        </div>
-        <div class="col-4">
-            <h5>Geburtsdatum</h5>
-            <input type="date" class="form-control" id="geburtsdatum" name="geburtsdatum" placeholder="tt.mm.jjjj">
-            <small>Error message</small>
-        </div>
-        <div class="col-4">
-            <h5>Wie sind Sie auf unsere Seite gestossen?</h5>
+        <div>
+            <label class="custom-lable">Wie sind Sie auf unsere Seite gestossen?</label>
             <p>Mehrere Antworten sind möglich.</p>
-            <input type="checkbox" class="form-check-input" name="freunde-familie" id="c1">
-            <label for="c1">Freunde/Familie</label><br>
-            <input type="checkbox" class="form-check-input" name="google" id="c2">
-            <label for="c2">Google</label><br>
-            <input type="checkbox" class="form-check-input" name="social-media" id="c3">
-            <label for="c3">Social Media</label><br>
-            <input type="checkbox" class="form-check-input" name="youtube" id="c4">
-            <label for="c4">YouTube</label>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" name="freunde-familie" id="freunde">
+                    <label class="form-check-label" for="freunde">Freunde</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="checkbox" class="form-check-input" name="google" id="google">
+                    <label class="form-check-label" for="google">Google</label>
+                </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="social-media" id="socialmedia">
+                <label class="form-check-label" for="socialmedia">Social Media</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" name="youtube" id="youtube">
+                <label class="form-check-label" for="youtube">YouTube</label>
+            </div>
+            <small>Error message</small>
         </div>
-        <div class="col-8">
-            <h5>Bitte wählen Sie über welches Thema Sie ein Anliegen haben:</h5>
-            <br>
+        <br>
+        <div>
+            <label class="custom-lable">Bitte wählen Sie über welches Thema Sie ein Anliegen haben:</label>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="radioProdukt" value="option1">
                 <label class="form-check-label" for="radioProdukt">Produkt</label>
@@ -126,15 +122,13 @@
             </div>
             <br>
             <br>
-            <textarea name="txt" class="form-control" maxlength="2500" placeholder="Geben Sie hier ihre Nachricht ein..."></textarea>
+            <textarea name="txt" class="form-control" maxlength="500" placeholder="Geben Sie hier ihre Nachricht ein..."></textarea>
+            <small>Error message</small>
         </div>
-        <div class="col">
-            <button type="submit" class="btn btn-outline-primary myButton submit-btn">Submit</button>
-        </div>
+        <button type="submit" class="btn btn-outline-primary myButton">Submit</button>
     </form>
-    <script src="../js/validate-inputs.js"></script>
 </div>
-
+<script src="../js/validate-inputs_v2.js"></script>
 <!--FOOTER-->
 <footer id="main-footer" class="bg-light">
     <div class="container">
@@ -145,8 +139,6 @@
         </div>
     </div>
 </footer>
-<!--Javascript Katalog-->
-<script src="../js/katalog_elemente2.js"></script>
 <!-- Optional JavaScript -->
 <script src="../js/jquery.min.js"></script>
 <script src="../js/popper.min.js"></script>

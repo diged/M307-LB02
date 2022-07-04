@@ -4,8 +4,13 @@ const vorname = document.getElementById('vorname');
 const nachname = document.getElementById('nachname');
 const email = document.getElementById('email');
 const geschlecht = document.getElementById('geschlecht');
-const telefonnummer = document.getElementById('telefonnummer');
-//Wie kontrolliere ich Radio-Buttons und Checkboxen?
+const schokolade = document.getElementById('radioSchokolade');
+const erdbeere = document.getElementById('radioErdbeere');
+const vanille = document.getElementById('radioVanille');
+const zitrone = document.getElementById('radioZitrone');
+const sorte = document.getElementById('sorte');
+const agb = document.forms["form"]["agb"];
+let complete = "true";
 
 // Show input error message
 function showError(input, message) {
@@ -27,17 +32,7 @@ function checkEmail(input) {
     if (re.test(input.value.trim())) {
         showSuccess(input);
     } else {
-        showError(input, 'E-Mail ist nicht gültig.');
-    }
-}
-
-// Check telefonnummer is valid
-function checkTelefon(input) {
-    const reg = /(\b(0041|0)|\B\+41)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/;
-    if (re.test(input.value.trim())) {
-        showSuccess(input);
-    } else {
-        showError(input, 'Telefonnummer ist nicht gültig.');
+        showError(input, 'Email ist nicht gültig.');
     }
 }
 
@@ -49,6 +44,25 @@ function checkGeschlecht() {
         return false;
     }
     return true;
+}
+
+//Check radiobutton is valid
+function checkSorte(schokolade, erdbeere, vanille, zitrone, sorte) {
+    if (schokolade.checked === false && erdbeere.checked === false && vanille.checked === false && zitrone.checked === false) {
+        showError(sorte, 'Bitte wählen Sie eine Sorte.');
+    } else {
+        showSuccess(sorte);
+    }
+}
+
+//Check checkboxes is valid
+function checkCheckbox() {
+    const checkbox = agb.checked
+    if (checkbox === false) {
+        showError(agb, 'Sie müssen den Geschäftsbedingungen zustimmen.');
+    } else if (checkbox === true){
+        showSuccess(agb);
+    }
 }
 
 //Check required fields
@@ -88,12 +102,14 @@ function getFieldName(input) {
 //Validate form input elements
 function validateForm(){
     //check required inputs
-    if(!checkRequired([vorname, nachname, email, geschlecht, telefonnummer])){
-        checkLength(vorname, 2, 30);
-        checkLength(nachname, 2, 30);
+    if(!checkRequired([vorname, nachname, email, geschlecht])){
+        checkLength(vorname, 3, 30);
+        checkLength(nachname, 3, 30);
         checkEmail(email);
-        checkTelefon(telefonnummer);
-        checkGeschlecht(geschlecht)
+        checkGeschlecht(geschlecht);
+        // checkSorte(schokolade, erdbeere, vanille, zitrone, sorte);
+        checkCheckbox();
+        completedForm()
     }
 }
 
@@ -104,3 +120,10 @@ form.addEventListener('submit', function(e) {
     //First validate form
     validateForm();
 });
+
+
+function completedForm() {
+    if (complete === "true") {
+        alert ("Danke für deine Registration!")
+    }
+}
