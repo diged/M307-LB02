@@ -4,5 +4,113 @@
     "username": "hmsuter",
     "email": "hmsuter@beispiel.ch",
     "password": "hello1234"
+  },
+  {
+    "id": "14c419c6-788a-4794-ac45-aabf911be2c8",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0123456789",
+    "anzahl": "4"
+  },
+  {
+    "id": "4f6ab6b5-a2d8-4533-aa7e-0501e0d90707",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0041123456789",
+    "anzahl": "4"
+  },
+  {
+    "id": "9a7992bc-96af-40a4-8341-e9f6e0cc0ee9",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "+41123456789",
+    "anzahl": "4"
+  },
+  {
+    "id": "77d8f025-25ea-46b8-911e-b5e353e04de6",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "+41123456789",
+    "anzahl": "6"
+  },
+  {
+    "id": "40b57483-d5da-41f0-b918-77afdd64d120",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "+41123456789",
+    "anzahl": "6"
+  },
+  {
+    "id": "b0d438dd-2168-47ec-a0b2-971567506f63",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "test0987",
+    "tel": "+41123456789",
+    "anzahl": "6"
+  },
+  {
+    "id": "ddb24d42-e0d3-494e-b2b4-c010be81520a",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0123456789",
+    "anzahl": "3"
+  },
+  {
+    "id": "d636d5a4-a5a9-4400-85b2-0c142028dbea",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "+41123456789",
+    "anzahl": "3"
+  },
+  {
+    "id": "fb3f7565-fcbc-4036-acce-13846d113780",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0041123456789",
+    "anzahl": "3"
+  },
+  {
+    "id": "8fb91395-e510-4d3f-8540-ef08f7a5666a",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0123456789",
+    "anzahl": "3"
+  },
+  {
+    "id": "1939c79b-6d18-4f02-a2f9-82c3a44148ce",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0123456789",
+    "anzahl": "3"
+  },
+  {
+    "id": "aad1a7b3-77c0-4325-88f6-6a541ba2bf4f",
+    "vorname": "Dila",
+    "nachname": "Gedik",
+    "email": "gedikd@bzz.ch",
+    "passwort": "hello1234",
+    "tel": "0123456789",
+    "anzahl": "12"
   }
 ]

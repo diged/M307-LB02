@@ -60,7 +60,6 @@ function checkAnzahl(input) {
     }
 }
 
-
 //Check required fields
 function checkRequired(inputArr) {
     let isRequired = false;

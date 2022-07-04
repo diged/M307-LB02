@@ -3,9 +3,9 @@ function showError(id, message) {
     return `${id}: ${message}`;
 }
 
-// Show success outline
+// Show success message
 function showSuccess(id) {
-    return `${id} successfully validate!`;
+    return `${id} erfolgreich validiert!`;
 }
 
 // Check email is valid
@@ -19,17 +19,45 @@ function checkEmail(id,input) {
     if (!re.test(input.trim())) {
         result = {
             isNotValid: true,
-            msg: showError(id, 'Email is not valid')
+            msg: showError(id, 'Email ist nicht gültig')
         }
     }
     return result;
 }
 
-//Check passwort
+//Check telefon is valid
+function checkTelefon(id,input) {
+    //Default: is valid
+    let result = {
+        isNotValid: false,
+        msg: showSuccess(id)
+    }
+    const re = /(\b(0041|0)|\B\+41)(\s?\(0\))?(\s)?[1-9]{2}(\s)?[0-9]{3}(\s)?[0-9]{2}(\s)?[0-9]{2}\b/;
+    if (!re.test(input.trim())) {
+        result = {
+            isNotValid: true,
+            msg: showError(id, 'Telefonnummer ist nicht gültig')
+        }
+    }
+    return result;
+}
 
-//Check anzahl -> email kopieren regex anpassen
-
-//Check telefon
+//Check anzahl is valid
+function checkAnzahl(id,input) {
+    //Default: is valid
+    let result = {
+        isNotValid: false,
+        msg: showSuccess(id)
+    }
+    const re = /(^0?[1-9]$)|(^1[0-2]$)/;
+    if (!re.test(input.trim())) {
+        result = {
+            isNotValid: true,
+            msg: showError(id, 'Anzahl ist nicht gültig')
+        }
+    }
+    return result;
+}
 
 //TODO: Check article for throwing errors in node js
 // https://stackoverflow.com/questions/33086247/throwing-an-error-in-node-js
@@ -64,43 +92,26 @@ function checkLength(id, input, min, max) {
         result = {
             isNotValid: true,
             msg: showError(id,
-            `${id} must be at least ${min} characters`)
+            `${id} muss mindestens ${min} Zeichen haben`)
         }
     } else if (input.length > max) {
         result = {
             isNotValid: true,
             msg: showError(id,
-                `${id} must be less than ${max} characters`)
+                `${id} darf maximal ${max} Zeichen haben`)
         }
     }
     return result;
 }
-
-/* Aufgabe 2:
-    Validieren Sie die Mobile-Nummer ähnlich wie bei der Email mit einer
-    Regular expression (regex). Für eine geeignete regex suchen Sie
-    im Internet nach "javascript regular expression for mobile number".
-*/
-// Check phone is valid
-
-
-/* Aufgabe 3:
-    Validieren Sie, ob die beiden Passwörter übereinstimmen.
-    Falls sie nicht übereinstimmen, geben Sie (ähnlich wie in den anderen Beispielen)
-    eine Fehlermeldung dem Formular aus.
-*/
-
-
 
 /**
  *  Export validation functions for further usage.
  *  function to export WITHOUT beackets!
  */
 module.exports = {
-    checkEmail,
-    checkLength,
     checkRequired,
-    checkPasswort,
+    checkLength,
+    checkEmail,
     checkTelefon,
     checkAnzahl
 }

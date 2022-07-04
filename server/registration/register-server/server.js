@@ -54,19 +54,13 @@ app.post('/register', (req, res) => {
     const HTTP_STATUS_NO_ACCEPTABLE = 406;
     //Daten des Posts-Requests auslesen und zusätzlich eine User-id erzeugen
 
-    /* Aufgabe 1
-        a: Fügen Sie Eingabefelder für Vor- und Nachname hinzu
-        b: Fügen Sie ein Eingabefeld für eine Telefonnummer hinzu
-        c: Fügen Sie ein weiteres Passwortfeld (zur Bestätigung des
-            ersten Passworts) hinzu
-     */
     let userObj = {
         "id": uuidv4(),
         "vorname": req.body.user.vorname,
         "nachname": req.body.user.nachname,
         "email": req.body.user.email,
         "passwort": req.body.user.passwort,
-        "tel": req.body.user.geschlecht,
+        "tel": req.body.user.tel,
         "anzahl": req.body.user.anzahl
     }
 
@@ -90,4 +84,3 @@ app.post('/register', (req, res) => {
         res.status(201).send(`User ${userObj.vorname} inserted!`);
     }
 });
-
